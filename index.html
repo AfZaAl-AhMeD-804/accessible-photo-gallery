@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessible Interactive Photo Gallery</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="gallery.js" defer></script>
+</head>
+<body onload="initializeGallery()">
+  <header>
+    <h1>Accessible Nature Gallery</h1>
+    <p>Hover over or use the Tab key to focus on any preview image below.</p>
+  </header>
+
+  <main>
+    <section id="image" aria-live="polite">
+      Hover over or tab into an image below to display here.
+    </section>
+
+    <section class="gallery-container" aria-label="Photo Gallery Thumbnails">
+      <div class="grid">
+        <figure class="preview" 
+                onmouseover="upDate(this)" 
+                onmouseleave="unDo()" 
+                onfocus="upDate(this)" 
+                onblur="unDo()">
+          <img src="https://picsum.photos/id/1018/300/200" 
+               alt="Misty mountain valley with a winding river at sunrise">
+          <figcaption>Misty Mountain</figcaption>
+        </figure>
+
+        <figure class="preview" 
+                onmouseover="upDate(this)" 
+                onmouseleave="unDo()" 
+                onfocus="upDate(this)" 
+                onblur="unDo()">
+          <img src="https://picsum.photos/id/1015/300/200" 
+               alt="A turquoise glacial river flowing through rocky green hills">
+          <figcaption>Glacial River</figcaption>
+        </figure>
+
+        <figure class="preview" 
+                onmouseover="upDate(this)" 
+                onmouseleave="unDo()" 
+                onfocus="upDate(this)" 
+                onblur="unDo()">
+          <img src="https://picsum.photos/id/1025/300/200" 
+               alt="A small pug wrapped warmly in a cozy woolen blanket">
+          <figcaption>Warm Pup</figcaption>
+        </figure>
+
+        <figure class="preview" 
+                onmouseover="upDate(this)" 
+                onmouseleave="unDo()" 
+                onfocus="upDate(this)" 
+                onblur="unDo()">
+          <img src="https://picsum.photos/id/1039/300/200" 
+               alt="Dense autumn forest covered with orange and golden leaves">
+          <figcaption>Autumn Forest</figcaption>
+        </figure>
+
+        <figure class="preview" 
+                onmouseover="upDate(this)" 
+                onmouseleave="unDo()" 
+                onfocus="upDate(this)" 
+                onblur="unDo()">
+          <img src="https://picsum.photos/id/1043/300/200" 
+               alt="Rocky ocean coastline with gentle waves breaking on shore">
+          <figcaption>Coastal Shore</figcaption>
+        </figure>
+
+        <figure class="preview" 
+                onmouseover="upDate(this)" 
+                onmouseleave="unDo()" 
+                onfocus="upDate(this)" 
+                onblur="unDo()">
+          <img src="https://picsum.photos/id/1062/300/200" 
+               alt="Sunlight filtering through tall green trees in a dense forest">
+          <figcaption>Forest Canopy</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Accessible Gallery Assignment</p>
+  </footer>
+</body>
+</html>
